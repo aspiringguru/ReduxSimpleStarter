@@ -17,8 +17,16 @@ const SearchBar = () => {
 // refactor above as an ES6 class
 class SearchBar extends Component {
   render() {
-    return <input />;
+    //return <input onChange={this.onInputChange}  />;
+    return <input onChange={(event) => console.log(event.target.value) }  />;
   }
+
+  /*
+  onInputChange(event) {
+    console.log(event.target.value)
+    //console.log(event)
+  }
+  */
 }
 
 
