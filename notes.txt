@@ -1,0 +1,23 @@
+https://www.udemy.com/react-redux/
+fork from https://github.com/StephenGrider/ReduxSimpleStarter
+
+git clone https://github.com/aspiringguru/ReduxSimpleStarter.git
+cd ReduxSimpleStarter
+npm install
+npm start
+
+http://localhost:8080/webpack-dev-server/
+
+transpile typescript to javascript using babel
+http://babeljs.io/repl
+
+
+youtube api key - https://console.developers.google.com/apis/credentials/key/226?project=project1-141311
+
+
+https://www.npmjs.com/package/youtube-api-v3-search
+
+npm list -g --depth=0   #lists user install packages
+
+
+4:57
