@@ -1,6 +1,13 @@
 import React from 'react';
 
 const VideoDetail = ({video}) => {
+
+  //Uncaught TypeError: Cannot read property 'id' of undefined
+  //to avoid this error above, do this test
+  if (!video){
+    return <div>Loading...</div>
+  }
+  
   const videoId = video.id.videoId
   const url = `https://www.youtube.com/embed/${videoId}`;
 
