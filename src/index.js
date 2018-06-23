@@ -11,14 +11,20 @@ class App extends Component {
 
   constructor(props) {
     super(props);
-    this.state = { videos: []  }
+    this.state = {
+      videos: [],
+      selectedVideo: null
+    };
     //YTSearch({key: API_KEY, term: 'surfboards'}, function(data){
     //refactor above to this
     YTSearch({key: API_KEY, term: 'surfboards'}, (videos) => {
       console.log(videos);
       //this.setState({ videos: videos});
       //ES6 syntax allows us to compact above to next line when key & property have same name
-      this.setState({ videos });
+      this.setState({
+        videos: videos,
+        selectedVideo: videos[0]
+      });
     });
   }
 
@@ -26,7 +32,7 @@ class App extends Component {
     return (
       <div>
         <SearchBar />
-        <VideoDetail video = {this.state.videos[0]}/>
+        <VideoDetail video = {this.state.selectedVideo}/>
         <VideoList videos = {this.state.videos} />
       </div>
     );
