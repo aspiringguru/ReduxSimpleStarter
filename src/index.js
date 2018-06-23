@@ -1,3 +1,6 @@
+//importing notes : when importing from library, just name library in quotes ie 'library-name'
+//when importing from a file, need to give relative path in quotes excluding the extension.
+
 import _ from 'lodash';
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
