@@ -15,9 +15,11 @@ class App extends Component {
       videos: [],
       selectedVideo: null
     };
-    //YTSearch({key: API_KEY, term: 'surfboards'}, function(data){
-    //refactor above to this
-    YTSearch({key: API_KEY, term: 'surfboards'}, (videos) => {
+    this.videoSearch('apples');
+  }
+
+  videoSearch(term) {
+    YTSearch({key: API_KEY, term: term}, (videos) => {
       console.log(videos);
       //this.setState({ videos: videos});
       //ES6 syntax allows us to compact above to next line when key & property have same name
@@ -31,7 +33,7 @@ class App extends Component {
   render () {
     return (
       <div>
-        <SearchBar />
+        <SearchBar onSearchTermChange={term => this.videoSearch(term) } />
         <VideoDetail video = {this.state.selectedVideo}/>
         <VideoList
           onVideoSelect={selectedVideo => this.setState({selectedVideo}) }
