@@ -20,4 +20,4 @@ https://www.npmjs.com/package/youtube-api-v3-search
 npm list -g --depth=0   #lists user install packages
 
 
-4:57
+npm install --save lodash
